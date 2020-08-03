@@ -1,0 +1,21 @@
+<div class="toolbar-container">
+  <div class="button-set">
+    <button type="button" aria-label="Toggle menu or go back to list item"
+            (click)="onNavToolbarBtnClicked()">
+      <mat-icon>menu</mat-icon>
+      <span>menu</span>
+    </button>
+    <button (click)="delete(note?.id)">
+      <mat-icon>delete</mat-icon>
+      <span>delete</span>
+    </button>
+    <button (click)="create()">
+      <mat-icon>create</mat-icon>
+      <span>create</span>
+    </button>
+  </div>
+  <div class="search">
+    <mat-icon>search</mat-icon>
+    <input type="search" placeholder="search" (input)="onItemSearched($event.target['value'])">
+  </div>
+</div>

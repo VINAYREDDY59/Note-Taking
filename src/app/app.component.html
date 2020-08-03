@@ -1,0 +1,19 @@
+<div class="main-container" id="main-div">
+  <div class="main-container__toolbar-container">
+    <app-toolbar (deleteNote)="deleteNote($event)" (createNote)="createNote()" [note]="requiredNote"
+                 (toggleSideNav)="onNavToolbarBtnClicked(drawer)" (searchTerm)="onItemSearched($event)"></app-toolbar>
+  </div>
+  <div class="main-content">
+    <mat-sidenav-container class="main-content__sidenav-container">
+      <mat-sidenav id="note-list-side-nav" #drawer fixedInViewport [mode]="'side'" [attr.role]="'navigation'"
+                   class="sidenav">
+        <app-note-list [notes]="userNotes" (noteClicked)="onNoteClicked($event)"
+                       [searchTerm]="searchTerm"></app-note-list>
+      </mat-sidenav>
+      <mat-sidenav-content class="sidenav-content">
+        <app-create-note [notes]="userNotes" style="height: 100%"></app-create-note>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>
+

@@ -1,0 +1,10 @@
+<mat-list-item class="list-item" role="list">
+  <div matLine class="list-item-heading">
+    <span [innerHTML]="(note.notes ? note.notes : 'New Note') | highlight : searchTerm">
+      {{ (note.notes ? note.notes : 'New Note') | highlight : searchTerm }}
+    </span>
+  </div>
+  <div matLine class="list-item__date-time">
+    <app-date-time class="list-item-text" [dateTime]="note.dateTime"></app-date-time>
+  </div>
+</mat-list-item>

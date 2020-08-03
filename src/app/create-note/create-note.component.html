@@ -1,0 +1,5 @@
+<div class="text-area-container">
+  <textarea id="user_notes" [autocapitalize]="true" [maxLength]="5000" (keyup)="onKeyup($event)"
+            [(ngModel)]="userNoteText"></textarea>
+  <span *ngIf="!!dateTime">{{ dateTime }}</span>
+</div>

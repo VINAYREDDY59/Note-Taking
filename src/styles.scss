@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import "~@angular/material/theming";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.mat-sidenav-content .mat-toolbar {
+  background-color: #2578a9;
+}
+
+.mat-list-base {
+  .mat-list-item-content {
+    font-size: 1rem;
+  }
+}
+
+.mat-list-item-content {
+  @media(max-width: 450px) {
+    padding: 0 5px !important;
+  }
+
+  span {
+    color: #1A1A1A;
+  }
+}
+
+.mat-list-base .mat-list-item .mat-list-option .mat-list-item-content {
+  @media(max-width: 450px) {
+    padding: 0 5px !important;
+  }
+}
+
+.highlight-search-term {
+  color: grey;
+}
